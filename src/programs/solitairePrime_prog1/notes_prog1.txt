@@ -1,0 +1,9 @@
+card
+do (verbs, actions, methods)
+    Card class
+    Card(rank, suit) constructor
+    void display()
+    int getValue()
+is (nouns, attributes, data members)
+    char rank
+    char suit
