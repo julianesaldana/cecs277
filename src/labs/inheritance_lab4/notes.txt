@@ -1,0 +1,9 @@
+interface is a blueprint
+    abstract and public
+    implements means interface
+    no constructor
+    abstract will let you have constructor
+extends means starting with object but extending it
+    better to use for keeping track of stuff
+
+https://www.w3schools.com/java/java_interface.asp
