@@ -1,0 +1,13 @@
+AL Alabama 350-369
+AK Alaska 995-999
+AS American Samoa 967-967
+AZ Arizona 850-865
+AR Arkansas 716-729 755
+ID Idaho 832-838
+IL Illinois 600-629
+IN Indiana 460-479
+IA Iowa 500-528
+OH Ohio 430-459
+OK Oklahoma 730-749
+OR Oregon 970-979
+UT Utah 840-847

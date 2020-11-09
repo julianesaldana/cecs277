@@ -7,10 +7,10 @@ package labs.files_lab7;
 // 4:45 PM PST
 
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 public class files_lab7 {
-    public static void main(String[] args) throws FileNotFoundException{
+    public static void main(String[]arg) throws FileNotFoundException {
         //importing ziptable file
         File text = new File("ziptable.txt");
 
