@@ -1,6 +1,6 @@
 package labs.lab13;
 
-public class hotFudge {
+public class hotFudge extends IceCreamDecorator{
     // the dessert we are decorating
     // notice the use of composition rather than inheritance
     protected Dessert flavor;
