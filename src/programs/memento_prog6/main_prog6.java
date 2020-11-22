@@ -22,7 +22,7 @@ public class main_prog6 {
         System.out.println("First saved State: " + originator.getState());
         originator.getStateFromMemento(careTaker.get(1));
         System.out.println("Second saved State: " + originator.getState());
-        //end of test
+        //end of test, redid
 
 
         long start, end;
