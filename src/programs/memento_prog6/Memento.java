@@ -1,13 +1,15 @@
 package programs.memento_prog6;
 
-public class Memento {
-    private String state;
+import java.math.BigInteger;
 
-    public Memento(String state){
+public class Memento {
+    private BigInteger state;
+
+    public Memento(BigInteger state){
         this.state = state;
     }
 
-    public String getState(){
+    public BigInteger getState(){
         return state;
     }
 }

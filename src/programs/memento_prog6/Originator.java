@@ -1,21 +1,23 @@
 package programs.memento_prog6;
 
-public class Originator {
-    private String state;
+import java.math.BigInteger;
 
-    public void setState(String state){
+public class Originator {
+    private BigInteger state;
+
+    public void setState(BigInteger state) {
         this.state = state;
     }
 
-    public String getState(){
+    public BigInteger getState() {
         return state;
     }
 
-    public Memento saveStateToMemento(){
+    public Memento saveStateToMemento() {
         return new Memento(state);
     }
 
-    public void getStateFromMemento(Memento memento){
+    public void getStateFromMemento(Memento memento) {
         state = memento.getState();
     }
 }
