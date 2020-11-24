@@ -6,10 +6,13 @@ public class main_prog6 {
     public static void main(String[] args) {
         Originator originator = new Originator();
         CareTaker careTaker = new CareTaker();
+
         long start, end;
         double dur;
+
         BigInteger f;
         BigInteger i = BigInteger.ZERO;
+
         while (i.compareTo(BigInteger.valueOf(1001)) < 0) {
             start = System.nanoTime();
             f = fibo(i, careTaker);
@@ -28,8 +31,7 @@ public class main_prog6 {
                 return BigInteger.ONE;
             else
                 return fibo(n.subtract(BigInteger.ONE), careTaker).add(fibo(n.subtract(BigInteger.TWO), careTaker));
-        } else {
+        } else
             return careTaker.get(careTaker.size() - 1).getState().add(careTaker.get(careTaker.size() - 2).getState());
-        }
     }
 }
