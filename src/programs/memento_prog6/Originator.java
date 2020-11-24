@@ -9,15 +9,11 @@ public class Originator {
         this.state = state;
     }
 
-    public BigInteger getState() {
-        return state;
-    }
+    public BigInteger getState() { return state; }
 
     public Memento saveStateToMemento() {
         return new Memento(state);
     }
 
-    public void getStateFromMemento(Memento memento) {
-        state = memento.getState();
-    }
+    public void getStateFromMemento(Memento memento) { state = memento.getState(); }
 }
