@@ -2,6 +2,7 @@ package programs.memento_prog6;
 
 import java.math.BigInteger;
 
+//modified to BigInteger
 public class Memento {
     private BigInteger state;
 

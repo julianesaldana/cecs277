@@ -1,3 +1,8 @@
+// Julian Saldana
+// Class (CECS 277-01)
+// Project Name (Prog 6 - Memento Design Patter (Fibonacci))
+// Due Date (November 24, 2020)
+
 package programs.memento_prog6;
 
 import java.math.BigInteger;
