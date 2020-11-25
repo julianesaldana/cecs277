@@ -16,7 +16,7 @@ public class main_prog6 {
         double dur;
 
         BigInteger f;
-        BigInteger i = BigInteger.ZERO;
+        BigInteger i = BigInteger.ZERO; // changed to BigInteger
 
         while (i.compareTo(BigInteger.valueOf(1001)) < 0) {
             start = System.nanoTime();
@@ -24,6 +24,7 @@ public class main_prog6 {
             originator.setState(f);
             careTaker.add(originator.saveStateToMemento());
             end = System.nanoTime();
+
             dur = (end - start);
             System.out.printf("Fibo(%d): %12d (NanoSecs: %5.3f)\n", i, f, dur);
             i = i.add(BigInteger.ONE);
