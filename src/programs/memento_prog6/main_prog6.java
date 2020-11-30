@@ -31,6 +31,8 @@ public class main_prog6 {
         }
     }
 
+
+    // modified for BigInteger and Memento classes
     public static BigInteger fibo(BigInteger n, CareTaker careTaker) {
         if (careTaker.size() < 2) {
             if (n.equals(BigInteger.ZERO) || n.equals(BigInteger.ONE))
