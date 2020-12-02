@@ -1,19 +1,21 @@
-class main_lab15 {
-  public static void main(String[] args) {
-    Cat typicalCat = new Cat("Fluffy");
+package labs.labState_lab15;
 
-		System.out.println(typicalCat);
+public class main_lab15 {
+    public static void main(String[] args) {
+        Cat typicalCat = new Cat("Fluffy");
 
-		typicalCat.sleep();
-		typicalCat.play();
+        System.out.println(typicalCat);
 
-		System.out.println(typicalCat);
+        typicalCat.sleep();
+        typicalCat.play();
 
-		typicalCat.eat();
-		typicalCat.play();
-		typicalCat.eat();
-		typicalCat.sleep();
+        System.out.println(typicalCat);
 
-		System.out.println(typicalCat);
-  }
+        typicalCat.eat();
+        typicalCat.play();
+        typicalCat.eat();
+        typicalCat.sleep();
+
+        System.out.println(typicalCat);
+    }
 }
