@@ -10,7 +10,9 @@ public class main_lab15 {
     public static void main(String[] args) {
         Cat typicalCat = new Cat("Fluffy");
 
+        // should print out "NAME is doing nothing"
         System.out.println(typicalCat);
+
 
         typicalCat.sleep();
         typicalCat.play();
