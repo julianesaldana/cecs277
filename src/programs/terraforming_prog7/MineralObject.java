@@ -1,4 +1,4 @@
 package programs.terraforming_prog7;
 
-abstract class MineralObject {
+abstract class MineralObject extends TerraObject {
 }
