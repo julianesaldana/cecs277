@@ -1,4 +1,5 @@
 package programs.terraforming_prog7;
 
-public class PlantObject extends TerraObject{
+public abstract class PlantObject extends TerraObject{
+
 }

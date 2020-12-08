@@ -1,4 +1,5 @@
 package programs.terraforming_prog7;
 
-abstract class WaterObject extends TerraObject{
+public abstract class WaterObject extends TerraObject{
+
 }

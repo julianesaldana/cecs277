@@ -9,38 +9,50 @@ public class main_prog7 {
             Scanner in = new Scanner(System.in);
             System.out.println("\nWelcome to the TerraForming Program\n");
 
+            // getting name of planet
             System.out.print("Enter the name of your new planet: ");
             String planetName = in.next();
 
+            // getting size of planet
             System.out.println("\nWhat size planet do you want? Enter the number of the option. \n" +
                     "1) small\n" +
                     "2) medium\n" +
                     "3) large\n" +
                     "4) extra large");
-            int size = in.nextInt();
+            int planetSize = in.nextInt();
 
+            // getting water percentage
             int percentLeft = 100;
             System.out.println("\nHow do you want to distribute the categories? Use percentages:");
             System.out.printf("Percentage remaining: %d\n", percentLeft);
             System.out.print("Enter water percentage: ");
             int percentWater = in.nextInt();
             percentLeft -= percentWater;
+
+            // getting plant percentage
             System.out.printf("Percentage remaining: %d\n", percentLeft);
             System.out.print("Enter plant percentage: ");
             int percentPlant = in.nextInt();
             percentLeft -= percentPlant;
+
+            // getting mineral percentage
             System.out.printf("Percentage remaining: %d\n", percentLeft);
             System.out.print("Enter mineral percentage: ");
             int percentMineral = in.nextInt();
             percentLeft -= percentMineral;
+
+            // getting animal percentage
             System.out.printf("Percentage remaining: %d\n", percentLeft);
             System.out.print("Enter animal percentage: ");
             int percentAnimal = in.nextInt();
             percentLeft -= percentMineral;
 
+            // checking if percentage is valid
             if (percentLeft < 0)
                 System.out.println("ERROR, percentage remaining must equal 0, please try again");
             else {
+                // confirming if the planet specs are okay
+                System.out.println("ADD HERE");
                 System.out.print("Enter (yes) to continue with these choices or (no) to return to the menu: ");
                 String confirm = in.next().toLowerCase();
                 System.out.println();
@@ -48,8 +60,8 @@ public class main_prog7 {
                 if (confirm.equals("yes")) {
                     boolean loop = true;
                     while (loop) {
-                        int temp = 0, temp2 = 0;
-                        System.out.printf("Planet name: %s, TerraObjects: %d, Impact Score: %d\n", planetName, temp, temp2);
+                        Planet newPlanet = new Planet(planetName, planetSize, percentWater, percentPlant, percentMineral, percentAnimal);
+                        System.out.printf("Planet name: %s, TerraObjects: %d, Impact Score: %d\n", planetName, newPlanet.getTotalTerraObjects(), newPlanet.getImpactScore());
                         System.out.println("1) List all water objects\n2) List all plant objects\n3) List all mineral objects\n4) List all animal objects\n5) Exit program");
                         switch (in.nextInt()) {
                             case 1:

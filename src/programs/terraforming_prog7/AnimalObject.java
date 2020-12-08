@@ -1,4 +1,7 @@
 package programs.terraforming_prog7;
 
-abstract class AnimalObject extends TerraObject {
+import java.util.Random;
+
+public abstract class AnimalObject extends TerraObject {
+
 }
