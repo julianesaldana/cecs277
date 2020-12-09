@@ -1,3 +1,8 @@
+// Julian Saldana
+// Class (CECS 277-01)
+// Project Name (Prog 7 - Terraforming)
+// Due Date (December 8, 2020)
+
 package programs.terraforming_prog7;
 
 import java.util.*;
