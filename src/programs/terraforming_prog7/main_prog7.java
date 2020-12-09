@@ -14,12 +14,12 @@ public class main_prog7 {
             String planetName = in.next();
 
             // getting size of planet
-            System.out.println("\nWhat size planet do you want? Enter the number of the option. \n" +
+            System.out.println("\nWhat size planet do you want?\n" +
                     "1) small\n" +
                     "2) medium\n" +
                     "3) large\n" +
                     "4) extra large");
-            int planetSize = in.nextInt();
+            String planetSize = in.next().toLowerCase();
 
             // getting water percentage
             int percentLeft = 100;
@@ -52,7 +52,7 @@ public class main_prog7 {
                 System.out.println("ERROR, percentage remaining must equal 0, please try again");
             else {
                 // confirming if the planet specs are okay
-                System.out.printf("\nYou chose the following:\nPlanet size: %d\nterraobject distribution:\nwater: %d%%\nplant: %d%%\nmineral: %d%%\nanimal: %d%%\n", planetSize, percentWater, percentPlant, percentMineral, percentAnimal);
+                System.out.printf("\nYou chose the following:\nPlanet size: %s\nterraobject distribution:\nwater: %d%%\nplant: %d%%\nmineral: %d%%\nanimal: %d%%\n", planetSize, percentWater, percentPlant, percentMineral, percentAnimal);
                 System.out.print("Enter (yes) to continue with these choices or (no) to return to the menu: ");
                 String confirm = in.next().toLowerCase();
                 System.out.println();

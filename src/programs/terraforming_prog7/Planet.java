@@ -11,21 +11,18 @@ public class Planet {
     private int totalImpactScore;
     private final String name;
 
-    public Planet(String n, int s, int waterPercentage, int plantPercentage, int mineralPercentage, int animalPercentage) {
+    public Planet(String n, String size, int waterPercentage, int plantPercentage, int mineralPercentage, int animalPercentage) {
         name = n;
         totalTerraObjects = 0;
         totalImpactScore = 0;
 
         Random rand = new Random();
-        int maxSize;
-        if (s == 1)
-            maxSize = rand.nextInt(500 - 200 + 1) + 200;
-        else if (s == 2)
-            maxSize = rand.nextInt(1000 - 501 + 1) + 501;
-        else if (s == 3)
-            maxSize = rand.nextInt(1500 - 1001) + 1001;
-        else
-            maxSize = rand.nextInt() + 1501;
+        int maxSize = switch (size) {
+            case "small" -> rand.nextInt(500 - 200 + 1) + 200;
+            case "medium" -> rand.nextInt(1000 - 501 + 1) + 501;
+            case "large" -> rand.nextInt(1500 - 1001) + 1001;
+            default -> rand.nextInt() + 1501;
+        };
 
         TerraObjectFactory factory = new TerraObjectFactory();
         for (int i = 0; i < (waterPercentage / 100) * maxSize; i++){
