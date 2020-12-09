@@ -7,7 +7,7 @@ public class main_prog7 {
         boolean run = true;
         while (run) {
             Scanner in = new Scanner(System.in);
-            System.out.println("\nWelcome to the TerraForming Program\n");
+            System.out.println("\nWelcome to the Terra-forming Program\n");
 
             // getting name of planet
             System.out.print("Enter the name of your new planet: ");
@@ -64,30 +64,28 @@ public class main_prog7 {
                         System.out.printf("Planet name: %s, TerraObjects: %d, Impact Score: %d\n", newPlanet.getName(), newPlanet.getTotalTerraObjects(), newPlanet.getImpactScore());
                         System.out.println("1) List all water objects\n2) List all plant objects\n3) List all mineral objects\n4) List all animal objects\n5) Exit program");
                         switch (in.nextInt()) {
-                            case 1:
+                            case 1 -> {
                                 System.out.println("Listing all water objects");
                                 newPlanet.listObjects(1);
-                                break;
-                            case 2:
+                            }
+                            case 2 -> {
                                 System.out.println("Listing all plant objects");
                                 newPlanet.listObjects(2);
-                                break;
-                            case 3:
+                            }
+                            case 3 -> {
                                 System.out.println("Listing all mineral objects");
                                 newPlanet.listObjects(3);
-                                break;
-                            case 4:
+                            }
+                            case 4 -> {
                                 System.out.println("Listing all animal objects");
                                 newPlanet.listObjects(4);
-                                break;
-                            case 5:
+                            }
+                            case 5 -> {
                                 System.out.println("Exiting...");
                                 run = false;
                                 loop = false;
-                                break;
-                            default:
-                                System.out.println("Wrong input! Please re-enter.");
-                                break;
+                            }
+                            default -> System.out.println("Wrong input! Please re-enter.");
                         }
                     }
                 }

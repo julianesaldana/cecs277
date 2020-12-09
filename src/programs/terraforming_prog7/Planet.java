@@ -3,10 +3,10 @@ package programs.terraforming_prog7;
 import java.util.*;
 
 public class Planet {
-    private final ArrayList<TerraObject> waterObjectContainer = new ArrayList<TerraObject>();
-    private final ArrayList<TerraObject> plantObjectContainer = new ArrayList<TerraObject>();
-    private final ArrayList<TerraObject> mineralObjectContainer = new ArrayList<TerraObject>();
-    private final ArrayList<TerraObject> animalObjectContainer = new ArrayList<TerraObject>();
+    private final ArrayList<TerraObject> waterObjectContainer = new ArrayList<>();
+    private final ArrayList<TerraObject> plantObjectContainer = new ArrayList<>();
+    private final ArrayList<TerraObject> mineralObjectContainer = new ArrayList<>();
+    private final ArrayList<TerraObject> animalObjectContainer = new ArrayList<>();
     private int totalTerraObjects;
     private int totalImpactScore;
     private final String name;
