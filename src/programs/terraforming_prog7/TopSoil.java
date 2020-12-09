@@ -2,7 +2,7 @@ package programs.terraforming_prog7;
 
 import java.util.Random;
 
-public class TopSoil extends MineralObject{
+public class TopSoil extends MineralObject {
     public TopSoil() {
         setName("TopSoil");
 

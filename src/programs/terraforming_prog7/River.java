@@ -1,7 +1,8 @@
 package programs.terraforming_prog7;
+
 import java.util.*;
 
-public class River extends WaterObject{
+public class River extends WaterObject {
     public River() {
         setName("River");
 

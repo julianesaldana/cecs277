@@ -2,7 +2,7 @@ package programs.terraforming_prog7;
 
 import java.util.Random;
 
-public class Grass extends TerraObject {
+public class Grass extends PlantObject {
     public Grass() {
         setName("Grass");
 

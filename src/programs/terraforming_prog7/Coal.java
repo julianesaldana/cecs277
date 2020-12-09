@@ -1,4 +1,5 @@
 package programs.terraforming_prog7;
+
 import java.util.*;
 
 public class Coal extends MineralObject {

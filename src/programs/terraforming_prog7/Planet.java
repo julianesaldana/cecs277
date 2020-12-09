@@ -3,10 +3,7 @@ package programs.terraforming_prog7;
 import java.util.*;
 
 public class Planet {
-    private final ArrayList<TerraObject> waterObjectContainer = new ArrayList<>();
-    private final ArrayList<TerraObject> plantObjectContainer = new ArrayList<>();
-    private final ArrayList<TerraObject> mineralObjectContainer = new ArrayList<>();
-    private final ArrayList<TerraObject> animalObjectContainer = new ArrayList<>();
+    private final ArrayList<TerraObject> terraObjectContainer = new ArrayList<>();
     private int totalTerraObjects;
     private int totalImpactScore;
     private final String name;
@@ -17,59 +14,66 @@ public class Planet {
         totalImpactScore = 0;
 
         Random rand = new Random();
-        int maxSize = switch (size) {
-            case "small" -> rand.nextInt(500 - 200 + 1) + 200;
-            case "medium" -> rand.nextInt(1000 - 501 + 1) + 501;
-            case "large" -> rand.nextInt(1500 - 1001) + 1001;
-            default -> rand.nextInt() + 1501;
-        };
+        int maxSize;
+        if (size.equals("small"))
+            maxSize = rand.nextInt(500 - 200 + 1) + 200;
+        else if (size.equals("medium"))
+            maxSize = rand.nextInt(1000 - 501 + 1) + 501;
+        else if (size.equals("large"))
+            maxSize = rand.nextInt(1500 - 1001) + 1001;
+        else
+            maxSize = rand.nextInt() + 1501;
+
 
         TerraObjectFactory factory = new TerraObjectFactory();
-        for (int i = 0; i < (waterPercentage / 100) * maxSize; i++){
+        for (int i = 0; i < (int) ((waterPercentage / 100.0) * maxSize); i++) {
             addObject(factory.getWaterObject());
         }
-        for (int i = 0; i < (mineralPercentage / 100) * maxSize; i++){
+        for (int i = 0; i < (int) ((plantPercentage / 100.0) * maxSize); i++) {
+            addObject(factory.getPlantObject());
+        }
+        for (int i = 0; i < (int) ((mineralPercentage / 100.0) * maxSize); i++) {
             addObject(factory.getMineralObject());
         }
-        for (int i = 0; i < (animalPercentage/100) * maxSize; i++){
+        for (int i = 0; i < (int) ((animalPercentage / 100.0) * maxSize); i++) {
             addObject(factory.getAnimalObject());
-        }
-        for (int i = 0; i < (plantPercentage/100) * maxSize; i++){
-            addObject(factory.getPlantObject());
         }
     }
 
     public void addObject(TerraObject object) {
-        if (object instanceof WaterObject)
-            waterObjectContainer.add(object);
-        else if (object instanceof PlantObject)
-            plantObjectContainer.add(object);
-        else if (object instanceof MineralObject)
-            mineralObjectContainer.add(object);
-        else
-            animalObjectContainer.add(object);
-
+        terraObjectContainer.add(object);
         totalTerraObjects++;
         totalImpactScore += object.getImpactScore();
     }
 
     public void listObjects(int option) {
-        if (option == 1) {
-            for (TerraObject obj : waterObjectContainer)
-                System.out.print(obj + " ");
+        switch (option) {
+            case 1:
+                for (TerraObject obj : terraObjectContainer) {
+                    if (obj instanceof WaterObject)
+                        System.out.print(obj + " ");
+                }
+                break;
+            case 2:
+                for (TerraObject obj : terraObjectContainer) {
+                    if (obj instanceof PlantObject)
+                        System.out.print(obj + " ");
+                }
+                break;
+            case 3:
+                for (TerraObject obj : terraObjectContainer) {
+                    if (obj instanceof MineralObject)
+                        System.out.print(obj + " ");
+                }
+                break;
+            case 4:
+                for (TerraObject obj : terraObjectContainer) {
+                    if (obj instanceof AnimalObject)
+                        System.out.print(obj + " ");
+                }
+                break;
         }
-        else if (option == 2) {
-            for (TerraObject obj : plantObjectContainer)
-                System.out.print(obj + " ");
-        }
-        else if (option == 3) {
-            for (TerraObject obj : mineralObjectContainer)
-                System.out.print(obj + " ");
-        }
-        else if (option == 4) {
-            for (TerraObject obj : animalObjectContainer)
-                System.out.print(obj + " ");
-        }
+        System.out.println();
     }
 
     public String getName() {

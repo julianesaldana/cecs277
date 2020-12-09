@@ -2,7 +2,7 @@ package programs.terraforming_prog7;
 
 import java.util.Random;
 
-public class Ocean extends WaterObject{
+public class Ocean extends WaterObject {
     public Ocean() {
         setName("Ocean");
 

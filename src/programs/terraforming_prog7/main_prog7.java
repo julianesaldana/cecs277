@@ -45,7 +45,7 @@ public class main_prog7 {
             System.out.printf("Percentage remaining: %d\n", percentLeft);
             System.out.print("Enter animal percentage: ");
             int percentAnimal = in.nextInt();
-            percentLeft -= percentMineral;
+            percentLeft -= percentAnimal;
 
             // checking if percentage is valid
             if (percentLeft < 0 || percentLeft > 100)
@@ -87,6 +87,7 @@ public class main_prog7 {
                             }
                             default -> System.out.println("Wrong input! Please re-enter.");
                         }
+                        System.out.println();
                     }
                 }
             }
