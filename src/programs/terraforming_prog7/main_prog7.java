@@ -52,7 +52,7 @@ public class main_prog7 {
                 System.out.println("ERROR, percentage remaining must equal 0, please try again");
             else {
                 // confirming if the planet specs are okay
-                System.out.println("ADD HERE");
+                System.out.printf("\nYou chose the following:\nPlanet size: %d\nterraobject distribution:\nwater: %d%%\nplant: %d%%\nmineral: %d%%\nanimal: %d%%\n", planetSize, percentWater, percentPlant, percentMineral, percentAnimal);
                 System.out.print("Enter (yes) to continue with these choices or (no) to return to the menu: ");
                 String confirm = in.next().toLowerCase();
                 System.out.println();
@@ -61,20 +61,24 @@ public class main_prog7 {
                     boolean loop = true;
                     while (loop) {
                         Planet newPlanet = new Planet(planetName, planetSize, percentWater, percentPlant, percentMineral, percentAnimal);
-                        System.out.printf("Planet name: %s, TerraObjects: %d, Impact Score: %d\n", planetName, newPlanet.getTotalTerraObjects(), newPlanet.getImpactScore());
+                        System.out.printf("Planet name: %s, TerraObjects: %d, Impact Score: %d\n", newPlanet.getName(), newPlanet.getTotalTerraObjects(), newPlanet.getImpactScore());
                         System.out.println("1) List all water objects\n2) List all plant objects\n3) List all mineral objects\n4) List all animal objects\n5) Exit program");
                         switch (in.nextInt()) {
                             case 1:
                                 System.out.println("Listing all water objects");
+                                newPlanet.listObjects(1);
                                 break;
                             case 2:
                                 System.out.println("Listing all plant objects");
+                                newPlanet.listObjects(2);
                                 break;
                             case 3:
                                 System.out.println("Listing all mineral objects");
+                                newPlanet.listObjects(3);
                                 break;
                             case 4:
                                 System.out.println("Listing all animal objects");
+                                newPlanet.listObjects(4);
                                 break;
                             case 5:
                                 System.out.println("Exiting...");
