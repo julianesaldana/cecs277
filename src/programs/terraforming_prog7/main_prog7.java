@@ -60,7 +60,10 @@ public class main_prog7 {
                 if (confirm.equals("yes")) {
                     boolean loop = true;
                     while (loop) {
+                        //creating planet
                         Planet newPlanet = new Planet(planetName, planetSize, percentWater, percentPlant, percentMineral, percentAnimal);
+
+                        //menu options
                         System.out.printf("Planet name: %s, TerraObjects: %d, Impact Score: %d\n", newPlanet.getName(), newPlanet.getTotalTerraObjects(), newPlanet.getImpactScore());
                         System.out.println("1) List all water objects\n2) List all plant objects\n3) List all mineral objects\n4) List all animal objects\n5) Exit program");
                         switch (in.nextInt()) {
