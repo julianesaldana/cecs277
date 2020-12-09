@@ -27,16 +27,16 @@ public class Planet {
 
         TerraObjectFactory factory = new TerraObjectFactory();
         for (int i = 0; i < (int) ((waterPercentage / 100.0) * maxSize); i++) {
-            addObject(factory.getWaterObject());
+            addObject(factory.createWaterObject());
         }
         for (int i = 0; i < (int) ((plantPercentage / 100.0) * maxSize); i++) {
-            addObject(factory.getPlantObject());
+            addObject(factory.createPlantObject());
         }
         for (int i = 0; i < (int) ((mineralPercentage / 100.0) * maxSize); i++) {
-            addObject(factory.getMineralObject());
+            addObject(factory.createMineralObject());
         }
         for (int i = 0; i < (int) ((animalPercentage / 100.0) * maxSize); i++) {
-            addObject(factory.getAnimalObject());
+            addObject(factory.createAnimalObject());
         }
     }
 
@@ -51,25 +51,25 @@ public class Planet {
             case 1:
                 for (TerraObject obj : terraObjectContainer) {
                     if (obj instanceof WaterObject)
-                        System.out.print(obj + " ");
+                        System.out.print(obj);
                 }
                 break;
             case 2:
                 for (TerraObject obj : terraObjectContainer) {
                     if (obj instanceof PlantObject)
-                        System.out.print(obj + " ");
+                        System.out.print(obj);
                 }
                 break;
             case 3:
                 for (TerraObject obj : terraObjectContainer) {
                     if (obj instanceof MineralObject)
-                        System.out.print(obj + " ");
+                        System.out.print(obj);
                 }
                 break;
             case 4:
                 for (TerraObject obj : terraObjectContainer) {
                     if (obj instanceof AnimalObject)
-                        System.out.print(obj + " ");
+                        System.out.print(obj);
                 }
                 break;
         }

@@ -22,6 +22,6 @@ public abstract class TerraObject {
 
     @Override
     public String toString() {
-        return name + impactScore;
+        return name + " " + impactScore + ", ";
     }
 }

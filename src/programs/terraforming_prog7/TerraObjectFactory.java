@@ -3,7 +3,7 @@ package programs.terraforming_prog7;
 import java.util.*;
 
 public class TerraObjectFactory {
-    public TerraObject getWaterObject() {
+    public TerraObject createWaterObject() {
         Random rand = new Random();
         int randomNum = rand.nextInt(4);
 
@@ -17,7 +17,7 @@ public class TerraObjectFactory {
             return new Pond();
     }
 
-    public TerraObject getPlantObject() {
+    public TerraObject createPlantObject() {
         Random rand = new Random();
         int randomNum = rand.nextInt(4);
 
@@ -31,7 +31,7 @@ public class TerraObjectFactory {
             return new Bush();
     }
 
-    public TerraObject getMineralObject() {
+    public TerraObject createMineralObject() {
         Random rand = new Random();
         int randomNum = rand.nextInt(4);
 
@@ -45,7 +45,7 @@ public class TerraObjectFactory {
             return new Iron();
     }
 
-    public TerraObject getAnimalObject() {
+    public TerraObject createAnimalObject() {
         Random rand = new Random();
         int randomNum = rand.nextInt(4);
 
