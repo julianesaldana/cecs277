@@ -48,7 +48,7 @@ public class main_prog7 {
             percentLeft -= percentMineral;
 
             // checking if percentage is valid
-            if (percentLeft < 0)
+            if (percentLeft < 0 || percentLeft > 100)
                 System.out.println("ERROR, percentage remaining must equal 0, please try again");
             else {
                 // confirming if the planet specs are okay
