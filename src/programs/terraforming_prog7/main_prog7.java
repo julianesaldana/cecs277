@@ -19,12 +19,12 @@ public class main_prog7 {
             String planetName = in.next();
 
             // getting size of planet
-            System.out.println("\nWhat size planet do you want?\n" +
+            System.out.println("\nEnter the number of the planet size you want:\n" +
                     "1) small\n" +
                     "2) medium\n" +
                     "3) large\n" +
                     "4) extra large");
-            String planetSize = in.next().toLowerCase();
+            int planetSize = in.nextInt();
 
             // getting water percentage
             int percentLeft = 100;
@@ -72,28 +72,30 @@ public class main_prog7 {
                         System.out.printf("Planet name: %s, TerraObjects: %d, Impact Score: %d\n", newPlanet.getName(), newPlanet.getTotalTerraObjects(), newPlanet.getImpactScore());
                         System.out.println("1) List all water objects\n2) List all plant objects\n3) List all mineral objects\n4) List all animal objects\n5) Exit program");
                         switch (in.nextInt()) {
-                            case 1 -> {
+                            case 1:
                                 System.out.println("Listing all water objects");
                                 newPlanet.listObjects(1);
-                            }
-                            case 2 -> {
+                                break;
+                            case 2:
                                 System.out.println("Listing all plant objects");
                                 newPlanet.listObjects(2);
-                            }
-                            case 3 -> {
+                                break;
+                            case 3:
                                 System.out.println("Listing all mineral objects");
                                 newPlanet.listObjects(3);
-                            }
-                            case 4 -> {
+                                break;
+                            case 4:
                                 System.out.println("Listing all animal objects");
                                 newPlanet.listObjects(4);
-                            }
-                            case 5 -> {
+                                break;
+                            case 5:
                                 System.out.println("Exiting...");
                                 run = false;
                                 loop = false;
-                            }
-                            default -> System.out.println("Wrong input! Please re-enter.");
+                                break;
+                            default:
+                                System.out.println("Wrong input! Please re-enter.");
+                                break;
                         }
                         System.out.println();
                     }
